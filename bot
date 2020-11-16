@@ -1,0 +1,39 @@
+import schedule
+import time
+import os
+import pyautogui as pe
+
+
+def zoom():
+    os.startfile("C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+    time.sleep(3)
+    pe.typewrite('web.whatsapp.com', 0.1)
+    pe.press('enter')
+    time.sleep(20)
+    pe.press('tab')
+    time.sleep(5)
+    pe.typewrite('Dalano', 0.1)
+    time.sleep(5)
+    pe.press('tab')  # opens chat
+    pe.moveTo(1267, 107)  # goes by search bar
+    pe.click(1267, 107, 1)  # clicks search bar
+    time.sleep(3)
+    pe.typewrite('zoom')
+    pe.moveTo(1069, 240, 0.1)  # move to zoom link
+    pe.click(1069, 240, 1)  # click the zoom link
+    time.sleep(3)
+    pe.moveTo(493, 605, 0.1)  # move to zoom final link
+    pe.click(493, 605, 1)  # move to zoom final link
+    time.sleep(70)
+    # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    pe.press('tab')  # join without video
+    pe.press('enter')
+    time.sleep(20)
+    pe.moveTo(51, 699, 0.1)
+    pe.click(51, 699, 1)
+
+
+schedule.every().day.at("20:02").do(zoom)
+while True:
+    schedule.run_pending()
+    time.sleep(1)

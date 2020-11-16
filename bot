@@ -37,3 +37,14 @@ schedule.every().day.at("20:02").do(zoom)
 while True:
     schedule.run_pending()
     time.sleep(1)
+    
+    
+    
+    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+    I KEEP GETTING THIS ERROR
+
+schedule.every(1).day.at("20:02").do(zoom)
+AttributeError: module 'schedule' has no attribute 'every'
+
+I even switched to ubuntu where there are no files. The name of the file is zoom.py so its not the name and i used pip to install schedule as well as a safety
